@@ -5,21 +5,30 @@ document.head.appendChild(tag);
 let player;
 window.onYouTubeIframeAPIReady = function () {
 	player = new YT.Player("player", {
-		videoId: "6FEsFvZ-hqY", // same video
+		videoId: "9-lpVPu4nDU",
 		playerVars: {
-			autoplay: 1,        // autoplay enabled
-			controls: 0,        // no player controls
-			mute: 0,            // 🔊 sound enabled
-			loop: 0,            // play only once
-			modestbranding: 1,  // minimal YouTube branding
-			playsinline: 1,     // play inside the page
-			rel: 0,             // no related videos at the end
-			showinfo: 0,        // hide title bar
+			start: 22,
+			end: 150,
+			autoplay: 1,
+			controls: 0,
+			mute: 1,
+			loop: 1,
+			modestbranding: 1,
+			playsinline: 1,
+			rel: 0,
+			showinfo: 0,
 			origin: window.location.origin
 		},
 		events: {
 			onReady: (event) => {
-				event.target.playVideo(); // start playing automatically
+				event.target.playVideo();
+			},
+			onStateChange: (event) => {
+				// When video ends, restart it
+				if (event.data === YT.PlayerState.ENDED) {
+					player.seekTo(22);
+					player.playVideo();
+				}
 			}
 		}
 	});
