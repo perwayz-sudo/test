@@ -1,0 +1,58 @@
+:root {
+	--title: "Napoleon Night Fever";
+	--author: "Matt Cannon";
+	--contact: "mc@mattcannon.design";
+	--description: "A scene of cozy a night in with friends bathed in the glow of Napoleon Dynamite's iconic dance scene.";
+	--keywords: "codepenchallenge, cpc-dance-party, napoleon dynamite, dance, movie scene, animation, ambient lighting, YouTube embed, cozy vibes, dark room, TV glow, iconic dance, jamiroquai, canned heat, interactive, viewing party";
+	--last-modified: "2025-01-28";
+	--content-language: "en";
+	--generator: "HTML5, CSS3, Javascript, YouTube API";
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	overflow: hidden;
+}
+
+.video-container {
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.6);
+	width: 150%;
+	height: 150%;
+	max-width: 2000px;
+	max-height: 1500px;
+	z-index: 1;
+}
+
+.video-container iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	pointer-events: none;
+	object-fit: cover;
+}
+
+.room {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("https://mattcannon.games/codepen/dance-party/tele.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	z-index: 2;
+}
