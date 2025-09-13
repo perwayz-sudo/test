@@ -5,13 +5,11 @@ document.head.appendChild(tag);
 let player;
 window.onYouTubeIframeAPIReady = function () {
 	player = new YT.Player("player", {
-		videoId: "9-lpVPu4nDU",
+		videoId: "6FEsFvZ-hqY",
 		playerVars: {
-			start: 22,
-			end: 150,
 			autoplay: 1,
 			controls: 0,
-			mute: 1,
+			mute: 0,
 			loop: 1,
 			modestbranding: 1,
 			playsinline: 1,
