@@ -7,11 +7,11 @@ window.onYouTubeIframeAPIReady = function () {
 	player = new YT.Player("player", {
 		videoId: "lsqbpw67hSs",
 		playerVars: {
-			start: 22,
-			end: 150,
+			start: 0,
+			end:,
 			autoplay: 1,
 			controls: 0,
-			mute: 1,
+			mute: 0,
 			loop: 1,
 			modestbranding: 1,
 			playsinline: 1,
