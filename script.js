@@ -5,7 +5,7 @@ document.head.appendChild(tag);
 let player;
 window.onYouTubeIframeAPIReady = function () {
 	player = new YT.Player("player", {
-		videoId: "9-lpVPu4nDU",
+		videoId: "lsqbpw67hSs",
 		playerVars: {
 			start: 22,
 			end: 150,
